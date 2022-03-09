@@ -1,0 +1,62 @@
+{
+  "name": "classSeatChange",
+  "version": "1.0.0",
+  "description": "염경중 2-1 자리바꾸기",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "deploy": "electron-builder --windows nsis:x64"
+  },
+  "build": {
+    "productName": "염경중 2-1 자리바꾸기",
+    "appId": "io.github.eungyolee.ymgng-class",
+    "asar": true,
+    "protocols": {
+      "name": "test",
+      "schemes": [
+        "test"
+      ]
+    },
+    "win": {
+      "target": [
+        "zip",
+        "nsis"
+      ],
+      "icon": "./icon.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "allowToChangeInstallationDirectory": false,
+      "deleteAppDataOnUninstall": true,
+      "createDesktopShortcut": true,
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "uninstallDisplayName": "염경중 2-1 자리바꾸기"
+    },
+    "directories": {
+      "buildResources": "./resources/installer/",
+      "output": "./exeResult/",
+      "app": "."
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eungyolee/ymgng-class.git"
+  },
+  "keywords": [],
+  "author": "Eungyo-Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eungyolee/ymgng-class/issues"
+  },
+  "homepage": "https://github.com/eungyolee/class#readme",
+  "dependencies": {
+    "check-internet-connected": "^2.0.5",
+    "electron-updater": "^4.3.9"
+  },
+  "devDependencies": {
+    "electron": "^14.2.6",
+    "electron-builder": "^22.11.7"
+  }
+}

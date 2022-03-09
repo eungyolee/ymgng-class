@@ -1,0 +1,256 @@
+@import url(./font.css);
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+html,
+body {
+  zoom: 1.1;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 18.5px;
+  background: gray;
+  color: #dcdcdc;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  -webkit-touch-callout: unset !important;
+  -webkit-touch-callout: unset;
+  -webkit-user-select: unset;
+  -webkit-user-drag: unset;
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  background: none;
+  border: none;
+  outline: none;
+  color: #dcdcdc;
+}
+
+@media (max-width: 500px) {
+  * {
+    font-size: 4vw;
+  }
+}
+
+#number {
+  font-size: 16px;
+}
+
+#app {
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 5px);
+  max-width: 500px;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#app.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#navbar {
+  height: 60px;
+  min-height: 60px;
+  margin: 2.5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #121212;
+  margin: 2.5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.btn:disabled {
+  background-color: #1a1a1a;
+  cursor: not-allowed !important;
+  margin: 2.5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#toggle {
+  margin: 2.5px;
+  padding: 5px;
+
+  width: 100%;
+  height: auto;
+  min-height: auto;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.switch {
+  margin-right: 10px;
+}
+
+#navbar.bottom button {
+  width: 100%;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  /* display: table-cell; */
+  /* display: flex;
+	position: relative;
+	vertical-align: middle; */
+  /* justify-content: space-evenly; */
+}
+
+#navbar.top {
+  background: #121212;
+  text-align: center;
+  flex-direction: column;
+}
+
+#navbar #title {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+#navbar #ba {
+  /* display: table;
+	width: 300px;
+	height: 200px; */
+
+  height: 100%;
+  font-size: 25px;
+  text-align: center;
+  font-weight: 700;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  justify-content: center;
+}
+
+#navbar.search {
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 5px;
+}
+
+#navbar.search #search {
+  font-size: 25px;
+  padding: 5px;
+  width: 100%;
+}
+
+#navbar.search #searchButton {
+  white-space: nowrap;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#table {
+  flex: 1;
+  display: flex;
+  overflow-y: auto;
+}
+
+#table #column {
+  flex: 1;
+  /* display: flex; */
+  flex-direction: column;
+}
+
+#table #column #item {
+  padding: 5px;
+  margin: 2.5px;
+  flex: 1;
+  text-align: center;
+  background: #cfa278;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#table #column #item #name {
+  font-weight: 700;
+}
+
+@media (max-width: 500px) {
+  #alert #body {
+    transform: translate(-50%, calc(-50% + 4vw)) scale(0.95);
+    border-radius: 2vw;
+  }
+  #alert #body #text {
+    padding: 2vw 4vw;
+  }
+  #alert #body #buttons {
+    border-top: 0.4vw solid #383838;
+  }
+  #alert #body #buttons #button {
+    padding: 1vw;
+  }
+  #app {
+    width: calc(100% - 1vw);
+    max-width: unset;
+    height: calc(100% - 1vw);
+  }
+  #navbar {
+    height: 12vw;
+    min-height: 12vw;
+    margin: 0.5vw;
+    border-radius: 5px;
+  }
+  #navbar #title {
+    font-size: 5vw;
+  }
+  #table #column #item {
+    padding: 1vw;
+    margin: 0.5vw;
+    border-radius: 1vw;
+  }
+  #navbar #ba {
+    font-size: 5vw;
+  }
+}
