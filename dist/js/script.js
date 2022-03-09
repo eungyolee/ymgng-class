@@ -4,7 +4,7 @@ const startButton = document.querySelector("#startBtn");
 // prettier-ignore
 function readFile(a,c){var b=new XMLHttpRequest();b.overrideMimeType("application/json");b.open("GET",a,true);b.onreadystatechange=function(){if(b.readyState===4&&b.status=="200"){c(b.responseText)}};b.send(null)}
 // prettier-ignore
-function divText(i,j,num,data){var x=document.getElementsByName(`${i}-${j}`);x[0].innerText=data[num]["name"];x[1].innerText=data[num]["number"]+"번";}
+function divText(i,j,num,data){var x=document.getElementsByName(`${i}-${j}`);x[0].innerText=data[num]["number"]+"번";}
 
 startButton.addEventListener("click", function () {
   change("all");
@@ -17,7 +17,6 @@ resetButton.addEventListener("click", function () {
   for (var i = 1; i < 6; i++) {
     for (var j = 1; j < 6; j++) {
       var x = document.getElementsByName(`${i}-${j}`);
-      x[0].innerText = "???";
       x[1].innerText = "?";
       d++;
     }
