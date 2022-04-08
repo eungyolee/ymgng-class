@@ -205,7 +205,7 @@ button {
   margin: 2.5px;
   flex: 1;
   text-align: center;
-  background: #121212;
+  background-color: #121212;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
