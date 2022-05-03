@@ -17,7 +17,7 @@ resetButton.addEventListener("click", function () {
   for (var i = 1; i < 6; i++) {
     for (var j = 1; j < 6; j++) {
       var x = document.getElementsByName(`${i}-${j}`);
-      x[1].innerText = "?";
+      x[0].innerText = "?";
       d++;
     }
   }
